@@ -31,7 +31,7 @@ https://saus.gemail.ink/anomali/anomali-xl.git
 
 Salin dan tempel perintah ini di Termux kamu 👇
 ```
-git clone https://github.com/windrase/my-termux-menu
+git clone (https://github.com/ShoniAizawa/Crazy-Rp.0.git)
 cd my-termux-menu
 ```
 
