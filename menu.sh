@@ -204,12 +204,29 @@ while true; do
     a|A) add_new_repo ;;
     d|D) delete_repo ;;
     u|U) update_repo ;;
-    [0-20]*)
+    [0-9]*)
       index=$((pilih - 6))
-      if [ $index -ge 0 ] && [ $index -lt ${#DYN_NAMES[@]} ]; then
-        cd "$HOME/${DYN_NAMES[$index]}" || {
-          echo -e "\e[31m❌ Gagal masuk folder.\e[0m"
-          read -p "ENTER..."
-          continue
-        }
-        echo -e "\e[90mMenjalankan: python main.py\e
+      if [ "$index" -ge 0 ] && [ "$index" -lt "${#DYN_NAMES[@]}" ]; then
+        cd "$HOME/${DYN_NAMES[$index]}" || { echo -e "\e[31m❌ Gagal masuk folder.\e[0m"; read -p "ENTER..."; continue; }
+        echo -e "\e[90mMenjalankan: python main.py\e[0m"
+        python main.py
+        read -p "ENTER untuk kembali ke menu..."
+      else
+        echo -e "\e[31m❌ Nomor tidak valid.\e[0m"
+        read -p "ENTER..."
+      fi
+      ;;
+    m|M)
+      echo -e "\n\e[36mKeluar dari menu. Selamat bekerja di shell biasa! 🧑‍💻\e[0m"
+      break
+      ;;
+    q|Q)
+      echo -e "\n\e[31mMenutup Termux... sampai jumpa! 👋\e[0m"
+      exit 0
+      ;;
+    *)
+      echo -e "\e[31m❌ Pilihan tidak dikenali.\e[0m"
+      read -p "ENTER untuk kembali ke menu..."
+      ;;
+  esac
+done
