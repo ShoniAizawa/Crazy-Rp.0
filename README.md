@@ -31,10 +31,10 @@ https://saus.gemail.ink/anomali/anomali-xl.git
 
 Salin dan tempel perintah ini di Termux kamu 👇
 ```
-git clone (https://github.com/ShoniAizawa/Crazy-Rp.0.git)
+git clone https://github.com/ShoniAizawa/Crazy-Rp.0.git
 cd my-termux-menu
 ```
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/windrase/my-termux-menu/main/install.sh)
+bash <(curl -fsSL https://github.com/ShoniAizawa/Crazy-Rp.0/main/install.sh)
 
